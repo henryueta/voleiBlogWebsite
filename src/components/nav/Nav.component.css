@@ -9,8 +9,11 @@
 
 .navBar>div>a{
     text-decoration: none;
-    font-family: var(--defaultFont);
     font-weight: bold;
     font-size: 1.5rem;
     color: white;
+}
+
+@media (max-width:1024px){
+    
 }

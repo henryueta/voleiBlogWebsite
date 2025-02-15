@@ -4,8 +4,6 @@ import blog from "../../data/blog.data.json"
 import author from "../../data/author.data.json"
 import { useParams } from 'react-router-dom';
 import "./Blog.component.css"
-import { marked } from 'marked'
-import { DOMPurify } from 'dompurify';
 
 
 type BlogProps = Record<"id"|"title"|"content"|"authorId",string>
@@ -49,7 +47,9 @@ const Blog = () => {
   return (
        <article className="blogArticle">
           <div className='titleBlogContainer'>
-            <h1>{blogData?.title}</h1>
+            <header>
+                <h1>{blogData?.title}</h1>
+            </header>
           </div>
           <div className='authorBlogContainer'>
           <img src={authorData?.image} alt="authorImage" />

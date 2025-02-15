@@ -1,35 +1,53 @@
 .blogArticle{
     padding: 75px;
     border-radius: 10px;
-    background-color: rgb(247, 246, 246);
-    font-family: var(--defaultFont);
-    width: 1100px;
+    /* background-color: rgb(247, 246, 246); */
+    width: 100%;
     place-items: center;
+    --maxContainerWidth:800px;
+    --titleFontSize:2rem;
+    --paragraphFontSize:1.1rem;
+    --authorFontSize:1rem;
 }
 
-.blogArticle h1,p{
+.blogArticle p{
     text-align: justify;
-    width: 800px;
+    width: var(--maxContainerWidth);
+}
+
+.blogArticle h1{
+    text-align: start;
+}
+
+.blogArticle figure{
+    margin: 40px 0px 40px 0px;
+}
+
+.blogArticle figcaption{
+    margin-top: 5px;
+    color: rgb(45, 45, 45);
 }
 
 .titleBlogContainer{
-    font-size: 2rem;
+    width: var(--maxContainerWidth);
+    font-size: var(--titleFontSize);
 }
 
 .authorBlogContainer{
     margin-top: 20px;
-    width: 800px;
+    width: var(--maxContainerWidth);
     height: 45px;
     display: flex;
     align-items: center;
     gap: 5px;
+    font-size: var(--authorFontSize);
 }
 
 .authorBlogContainer>img{
-    border: 2px solid red;
     width: 40px;
     height: 40px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .contentBlogContainer{
@@ -37,7 +55,51 @@
 }
 
 .contentBlogContainer>h1{
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+    font-size: 1.5rem;
+    margin: 25px 0px 40px 0px
 }
 
+.contentBlogContainer>h2{
+    font-size: 1.2rem;
+    margin: 25px 0px 15px 0px;
+}
+
+.contentBlogContainer>p{
+    margin: 10px 0px 10px 0px;
+    font-size: var(--paragraphFontSize);
+}
+
+.contentBlogContainer ol,ul{
+    padding: 0px 0px 0px 20px;
+    list-style: disc;
+}
+
+.contentBlogContainer>ol>li{
+    margin: 22px 0px 22px 0px;
+}
+
+.contentBlogContainer>ul>li{
+    margin: 22px 0px 22px 0px;
+}
+
+.contentBlogContainer img{
+    width: var(--maxContainerWidth);
+    height: 400px;
+    background-color: black;
+}
+
+@media (max-width:1024px){
+    .blogArticle{
+        padding: 2px;
+        --maxContainerWidth:100%;
+        --titleFontSize:1.5rem;
+        --paragraphFontSize:1rem;
+        --authorFontSize:0.7rem;
+    }
+
+    .contentBlogContainer img{
+        width: 100%;
+        height: auto;
+    }
+
+}

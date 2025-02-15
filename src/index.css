@@ -3,5 +3,5 @@
     margin: 0;
     box-sizing: border-box;
     --greenColor: rgb(0,191,99);
-    --defaultFont:Arial;
+    font-family: Arial;
 }
