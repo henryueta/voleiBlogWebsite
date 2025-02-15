@@ -1,0 +1,16 @@
+
+.navBar{
+    background-color: var(--greenColor);
+    padding:25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar>div>a{
+    text-decoration: none;
+    font-family: var(--defaultFont);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
