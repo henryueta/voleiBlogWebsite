@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import { useNavigate } from 'react-router-dom'
 import Nav from '../../components/nav/Nav.component';
+import Footer from '../../components/footer/Footer.component';
+import BlogCardList from '../../components/blogCardList/BlogCardList.component';
 
 
 function App() {
@@ -11,7 +13,9 @@ const navigate = useNavigate();
   return (
     <>
     <Nav></Nav>
-    <button onClick={()=>navigate("/blog/Adkwqoir0-21")}>Click</button>
+    <button onClick={()=>navigate("/blog/OLAadm13")}>Click</button>
+    <BlogCardList></BlogCardList>
+    <Footer></Footer>
     </>
   )
 }

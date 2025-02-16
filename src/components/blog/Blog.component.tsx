@@ -6,9 +6,9 @@ import { useParams } from 'react-router-dom';
 import "./Blog.component.css"
 
 
-type BlogProps = Record<"id"|"title"|"content"|"authorId",string>
+export type BlogProps = Record<"id"|"title"|"content"|"authorId",string>
 
-type AuthorProps = Record<"id"|"name"|"image", string>;
+export type AuthorProps = Record<"id"|"name"|"image", string>;
 
 const Blog = () => {
   const {id} = useParams();
@@ -32,7 +32,6 @@ const Blog = () => {
           fetch(url)
             .then(response => response.text())
             .then(data => {
-               console.log(data)
               setBlogContent(data.toString())
             })
             .catch(error => {
@@ -42,7 +41,6 @@ const Blog = () => {
       }
       
     },[blogData])
-    console.log(blogContent)
 
   return (
        <article className="blogArticle">

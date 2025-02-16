@@ -4,15 +4,22 @@
     "id":"Adkwqoir0-21",
     "title":"Voleibol: Um breve resumo sobre o esporte",
     "cape":"",
-    "content":"http://localhost:5173/blog-posts/post1.html",
+    "content":"http://localhost:5174/blog-posts/post1.html",
     "authorId":"akpd104"
 },
 {
     "id":"AOJOQ!JR",
     "title":"Voleibol: 5 melhores jogadores femininos e masculinos da história",
     "cape":"",
-    "content":"http://localhost:5173/blog-posts/post2.html",
+    "content":"http://localhost:5174/blog-posts/post2.html",
     "authorId":"akpd104"
+},
+{
+    "id":"OLAadm13",
+    "title":"Equipamentos de vôlei: tudo o que você precisa para jogar",
+    "cape":"",
+    "content":"http://localhost:5174/blog-posts/post3.html",
+    "authorId":"AL1jkf1"
 }
 
 

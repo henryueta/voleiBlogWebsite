@@ -5,7 +5,9 @@
     width: 100%;
     place-items: center;
     --maxContainerWidth:800px;
-    --titleFontSize:2rem;
+    --blogTitleFontSize:2rem;
+    --h1FontSize:1.5rem;
+    --h2FontSize:1.2rem;
     --paragraphFontSize:1.1rem;
     --authorFontSize:1rem;
 }
@@ -30,7 +32,7 @@
 
 .titleBlogContainer{
     width: var(--maxContainerWidth);
-    font-size: var(--titleFontSize);
+    font-size: var(--blogTitleFontSize);
 }
 
 .authorBlogContainer{
@@ -55,12 +57,12 @@
 }
 
 .contentBlogContainer>h1{
-    font-size: 1.5rem;
+    font-size: var(--h1FontSize);
     margin: 25px 0px 40px 0px
 }
 
 .contentBlogContainer>h2{
-    font-size: 1.2rem;
+    font-size: var(--h2FontSize);
     margin: 25px 0px 15px 0px;
 }
 
@@ -92,7 +94,9 @@
     .blogArticle{
         padding: 2px;
         --maxContainerWidth:100%;
-        --titleFontSize:1.5rem;
+        --blogTitleFontSize:1.5rem;
+        --h1FontSize:1.3rem;
+        --h2FontSize:1rem;
         --paragraphFontSize:1rem;
         --authorFontSize:0.7rem;
     }
