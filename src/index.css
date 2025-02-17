@@ -5,3 +5,13 @@
     --greenColor: rgb(0,191,99);
     font-family: Arial;
 }
+
+::-webkit-scrollbar{
+    background-color: rgb(238, 238, 238);
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(192, 191, 191);
+    border-radius: 15px;
+}

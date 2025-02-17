@@ -1,0 +1,9 @@
+
+.blogCardListSection{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: auto;
+    place-items: center;
+    gap: 10px;
+    padding: 10px;
+}

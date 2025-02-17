@@ -7,13 +7,11 @@ import BlogCardList from '../../components/blogCardList/BlogCardList.component';
 
 
 function App() {
-const navigate = useNavigate();
 
 //DomPurify
   return (
     <>
     <Nav></Nav>
-    <button onClick={()=>navigate("/blog/OLAadm13")}>Click</button>
     <BlogCardList></BlogCardList>
     <Footer></Footer>
     </>

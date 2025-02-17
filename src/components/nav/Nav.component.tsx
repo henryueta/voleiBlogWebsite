@@ -6,7 +6,7 @@ const Nav = () => {
     <nav className="navBar">
       <div className="logoContainer">
         <Link to={"/"}>
-          BlogSport
+          VoleiBlog
         </Link>
       </div>
     </nav>

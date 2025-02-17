@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import "./Blog.component.css"
 
 
-export type BlogProps = Record<"id"|"title"|"content"|"authorId",string>
+export type BlogProps = Record<"id"|"title"|"content"|"authorId"|"cape",string>
 
 export type AuthorProps = Record<"id"|"name"|"image", string>;
 
@@ -16,7 +16,7 @@ const Blog = () => {
     const [blogData,setBlogData] = useState<BlogProps>();
     const [authorData,setAuthorData] = useState<AuthorProps>();
     const [blogContent,setBlogContent] = useState<string>("# ttitulo");
-
+    
     useEffect(()=>{
       setBlogData(onSearchById<BlogProps>(id!,blog))
     },[])
@@ -50,9 +50,12 @@ const Blog = () => {
             </header>
           </div>
           <div className='authorBlogContainer'>
-          <img src={authorData?.image} alt="authorImage" />
+          <img src={authorData?.image} alt={authorData?.name + "´s image"} />
           <b>{authorData?.name}</b>
           </div>
+          <div className='capeBlogContainer'>
+          <img src={blogData?.cape}  alt={"blog "+blogData?.title + " cape"} />
+        </div>  
           <div className='contentBlogContainer' dangerouslySetInnerHTML={
             {
               __html:blogContent

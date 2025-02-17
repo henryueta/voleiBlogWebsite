@@ -19,10 +19,15 @@ const BlogCardList = () => {
 
     {
         blog.map((item)=>{
-            return <BlogCard key={item.id} redirectTo={"/blog/"+item.id} authorName={onSearchById(item.authorId,author)?.name || ""} cape={item.cape} title={item.title}/>
+            return <BlogCard key={item.id} redirectTo={"/blog/"+item.id} author={onSearchById(item.authorId,author) || {
+              id:"",
+              image:"",
+              name:""
+            }} cape={item.cape} title={item.title}/>
         }
         )
     }
+    
 
     </section>
   )
