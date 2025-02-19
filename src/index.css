@@ -10,6 +10,7 @@
     --h2FontSize:1.2rem;
     --paragraphFontSize:1.1rem;
     --authorFontSize:1rem;
+    --capeBorderRadius:0.7rem;
 }
 
 ::-webkit-scrollbar{

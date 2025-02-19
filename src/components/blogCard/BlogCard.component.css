@@ -3,11 +3,15 @@ a{
 }
 
 .blogCardContainer{
-    padding: 15px;
     width: 400px;
     height: auto;
     color: black;
-    border-bottom: 2px solid rgb(203, 202, 202);
+    padding: 0px 0px 10px 0px;
+}
+
+.blogCardContainer>*:not(.capeBlogCardContainer){
+    padding: 0px 5px 0px 5px;
+
 }
 
 .blogCardContainer:hover{
@@ -19,6 +23,7 @@ a{
     background-color: black;
     width: 100%;
     height: auto;
+    border-radius: var(--capeBorderRadius);
 }
 
 .titleBlogCardContainer{

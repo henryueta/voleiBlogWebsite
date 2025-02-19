@@ -1,0 +1,9 @@
+
+.mainContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1300px;
+    place-self: center;
+    padding: 10px;
+}

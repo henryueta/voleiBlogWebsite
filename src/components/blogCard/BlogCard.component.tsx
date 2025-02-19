@@ -4,11 +4,11 @@ import { AuthorProps } from "../blog/Blog.component"
 import { useEffect, useState } from "react"
 import { BlogDateProps } from "../blog/Blog.component"
 
-interface AuthorCardProps{
+export interface AuthorCardProps{
   author:AuthorProps
 }
 
-type BlogCardProps = Record<"cape"|"title"|"redirectTo"|"date",string> & AuthorCardProps
+export type BlogCardProps = Record<"cape"|"title"|"redirectTo"|"date",string> & AuthorCardProps
 
 
 const BlogCard = ({
@@ -49,7 +49,7 @@ const BlogCard = ({
         <h1>{title.length > 50 ? title.slice(0,50).concat("...") : title}</h1>
       </div>
       <div className="blogCardDateContainer">
-        {blogCardDate.day+"/"+ (blogCardDate.month.toString().length == 1 ? "0".concat(blogCardDate.month.toString()) : blogCardDate.month) +"/"+blogCardDate.year}
+        <p>{blogCardDate.day+"/"+ (blogCardDate.month.toString().length == 1 ? "0".concat(blogCardDate.month.toString()) : blogCardDate.month) +"/"+blogCardDate.year}</p>
       </div>
       <div className="authorBlogCardContainer">
         <img src={author.image} alt={author.name+" image"} />
