@@ -4,12 +4,7 @@
     /* background-color: rgb(247, 246, 246); */
     width: 100%;
     place-items: center;
-    --maxContainerWidth:800px;
-    --blogTitleFontSize:2rem;
-    --h1FontSize:1.5rem;
-    --h2FontSize:1.2rem;
-    --paragraphFontSize:1.1rem;
-    --authorFontSize:1rem;
+
 }
 
 .blogArticle p{
@@ -33,6 +28,12 @@
 .titleBlogContainer{
     width: var(--maxContainerWidth);
     font-size: var(--blogTitleFontSize);
+}
+
+.blogDateContainer{
+    font-size: var(--h2FontSize);
+    color: gray;
+    margin: 10px 0px 10px 0px;
 }
 
 .authorBlogContainer{
@@ -100,12 +101,7 @@
 @media (max-width:1024px){
     .blogArticle{
         padding: 2px;
-        --maxContainerWidth:100%;
-        --blogTitleFontSize:1.5rem;
-        --h1FontSize:1.4rem;
-        --h2FontSize:1.2rem;
-        --paragraphFontSize:1.1rem;
-        --authorFontSize:0.7rem;
+        
     }
 
     .contentBlogContainer img{

@@ -23,7 +23,10 @@ const BlogCardList = () => {
               id:"",
               image:"",
               name:""
-            }} cape={item.cape} title={item.title}/>
+            }} 
+            cape={item.cape}
+             title={item.title}
+              date={item.date}/>
         }
         )
     }

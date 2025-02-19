@@ -4,6 +4,12 @@
     box-sizing: border-box;
     --greenColor: rgb(0,191,99);
     font-family: Arial;
+    --maxContainerWidth:800px;
+    --blogTitleFontSize:2rem;
+    --h1FontSize:1.5rem;
+    --h2FontSize:1.2rem;
+    --paragraphFontSize:1.1rem;
+    --authorFontSize:1rem;
 }
 
 ::-webkit-scrollbar{
@@ -14,4 +20,15 @@
 ::-webkit-scrollbar-thumb{
     background-color: rgb(192, 191, 191);
     border-radius: 15px;
+}
+
+@media (max-width:1024px){
+    *{
+        --maxContainerWidth:100%;
+        --blogTitleFontSize:1.5rem;
+        --h1FontSize:1.4rem;
+        --h2FontSize:1.2rem;
+        --paragraphFontSize:1.1rem;
+        --authorFontSize:0.7rem;
+    }
 }

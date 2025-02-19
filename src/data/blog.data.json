@@ -5,21 +5,24 @@
     "title":"Voleibol: Um breve resumo sobre o esporte",
     "cape":"https://res.cloudinary.com/ditnypr5s/image/upload/v1739823203/bolaVolei_j5agli.jpg",
     "content":"http://localhost:5173/blog-posts/post1.html",
-    "authorId":"akpd104"
+    "authorId":"akpd104",
+    "date": "2024-05-24T23:00:40.618Z"
 },
 {
     "id":"AOJOQ!JR",
     "title":"Voleibol: 5 melhores jogadores femininos e masculinos da história",
     "cape":"https://res.cloudinary.com/ditnypr5s/image/upload/v1739823233/novaCapa2_rvuwkp.webp",
     "content":"http://localhost:5173/blog-posts/post2.html",
-    "authorId":"akpd104"
+    "authorId":"akpd104",
+    "date": "2024-05-23T08:56:21.618Z"
 },
 {
     "id":"OLAadm13",
     "title":"Equipamentos de vôlei: tudo o que você precisa para jogar",
     "cape":"https://res.cloudinary.com/ditnypr5s/image/upload/v1739823202/bolaCapa_vhww4g.jpg",
     "content":"http://localhost:5173/blog-posts/post3.html",
-    "authorId":"AL1jkf1"
+    "authorId":"AL1jkf1",
+    "date": "2025-02-23T09:10:21.618Z"
 }
 
 
