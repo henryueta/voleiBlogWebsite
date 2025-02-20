@@ -6,12 +6,11 @@ import { useParams } from 'react-router-dom';
 import "./Blog.component.css"
 import SuggestionList from '../suggestionList/SuggestionList.component';
 import { SuggestionProps } from '../suggestionList/SuggestionList.component';
+import useDate, { FormatedDateProps } from '../../hooks/useDate';
 
 export type BlogProps = Record<"id"|"title"|"content"|"authorId"|"cape"|"date",string>
 
 export type AuthorProps = Record<"id"|"name"|"image", string>;
-
-export type BlogDateProps = Record<"day"|"month"|"year",number>
 
 
 const Blog = () => {
@@ -20,9 +19,9 @@ const Blog = () => {
     const [blogData,setBlogData] = useState<BlogProps>();
     const [authorData,setAuthorData] = useState<AuthorProps>();
     const [blogContent,setBlogContent] = useState<string>("");
-    const [blogDate,setBlogDate] = useState<BlogDateProps>();
+    const [blogDate,setBlogDate] = useState<FormatedDateProps>();
     const [blogSuggestionList,setBlogSuggestionList] = useState<SuggestionProps[]>([]);
-
+    const {onFormatDate} = useDate()
 
     useEffect(()=>{
       window.scroll(0,0)
@@ -30,11 +29,7 @@ const Blog = () => {
     },[id])
 
     useEffect(()=>{
-      setBlogDate({
-        day:new Date(blogData?.date || "").getDate() || 0,
-        month:new Date(blogData?.date || "").getMonth() || 0,
-        year: new Date(blogData?.date || "").getFullYear() || 0
-      })
+      setBlogDate(onFormatDate(blogData?.date || ""))
       setAuthorData(onSearchById<AuthorProps>(blogData?.authorId || "",author))
       const regex = /https?:\/\/[^\s]+/g;
       //g = capturar todas as igualdades

@@ -2,7 +2,8 @@ import { Link } from "react-router-dom"
 import "./BlogCard.component.css"
 import { AuthorProps } from "../blog/Blog.component"
 import { useEffect, useState } from "react"
-import { BlogDateProps } from "../blog/Blog.component"
+import { FormatedDateProps } from "../../hooks/useDate"
+import useDate from "../../hooks/useDate"
 
 export interface AuthorCardProps{
   author:AuthorProps
@@ -23,20 +24,23 @@ const BlogCard = ({
     redirectTo=""
 }:BlogCardProps) => {
 
-  const [blogCardDate,setBlogCardDate] = useState<BlogDateProps>({
-    day:new Date("").getDate(),
-    month:new Date("").getMonth(),
-    year:new Date("").getFullYear() 
-  });
+  const {onFormatDate} = useDate()
+  const [blogCardDate,setBlogCardDate] = useState<FormatedDateProps>(onFormatDate(""));
 
   useEffect(()=>{
 
-    setBlogCardDate({
-      day:new Date(date).getDate(),
-      month:new Date(date).getMonth(),
-      year:new Date(date).getFullYear()
-    })
-    
+    setBlogCardDate(onFormatDate(date))
+    // Criando duas datas
+// const data1 = new Date('2025-02-19');
+// const data2 = new Date(date);
+// // Calculando a diferença em milissegundos
+// const diferencaEmMs = data2 - data1;
+
+// // Convertendo a diferença para dias
+// const diferencaEmDias = diferencaEmMs / (1000 * 60 * 60 * 24);
+
+// console.log(`A diferença entre é de ${diferencaEmDias} dias.`);
+
   },[date])
 
   return (

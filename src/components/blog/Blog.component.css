@@ -34,6 +34,7 @@
     font-size: var(--h2FontSize);
     color: gray;
     margin: 10px 0px 10px 0px;
+    width: var(--maxContainerWidth);
 }
 
 .authorBlogContainer{
