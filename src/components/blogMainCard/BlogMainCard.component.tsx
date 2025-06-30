@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BlogCardProps,AuthorCardProps } from "../blogCard/BlogCard.component"
+import { BlogCardProps } from "../blogCard/BlogCard.component"
 import "./BlogMainCard.component.css"
 import useDate, { FormatedDateProps } from "../../hooks/useDate";
 import { Link } from "react-router-dom";

@@ -9,7 +9,7 @@ const useQuery = ():{
 
 
     const onSearchById = <T extends DefaultQueryProps>(idParam:string,list:T[]):T | undefined =>{
-        const result = list.find((item,index)=>{
+        const result = list.find((item)=>{
            return item.id === idParam
         })
         return result

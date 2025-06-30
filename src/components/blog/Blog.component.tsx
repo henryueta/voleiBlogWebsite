@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import useQuery from '../../hooks/useQuery';
 import blog from "../../data/blog.data.json"
 import author from "../../data/author.data.json"
